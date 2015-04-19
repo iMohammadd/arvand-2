@@ -1,0 +1,94 @@
+.rtl {
+    direction: rtl;
+}
+
+.main .content {
+    display: inline-block;
+}
+
+.main .content ul{
+    list-style: none;
+}
+.main .content ul li {
+    float: right;
+    width: 20%;
+    margin: 0.5% 2.5%;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: 2px 2px #e9e9e9;
+    border: 1px solid #e8e8e8;
+}
+ .main .content ul li:hover {
+     background: #e8e8e8;
+ }
+.main .content ul li img {
+    display: block;
+    width: 100%;
+}
+
+.main .content ul li div {
+    padding: 10px;
+}
+
+.naskh {
+    font-family: 'Droid Arabic Naskh', serif;
+}
+
+.context {
+    padding: 0 40px 0 0;
+}
+
+.cars {
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.cars article {
+    float: right;
+    max-width: 28%;
+    margin: 1% 2.5%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: #f9f9f9;
+    border: #e8e8e8; 
+    box-shadow: 2px 2px #e9e9e9;
+}
+
+.cars article:hover {
+    background: #e9e9e9;
+}
+
+.cars article .img img {
+    width: 100%;
+}
+
+.cars article .info {
+    padding: 5px;
+    text-align: justify;
+}
+
+th {
+    text-align: right;
+}
+
+a: hover {
+    text-decoration: none !important;
+}
+
+.top,
+.foot {
+    background: #ededed;
+    text-align: center;
+}
+
+.input-group button {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.input-group input {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
