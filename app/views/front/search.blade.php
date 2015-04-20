@@ -2,16 +2,14 @@
                         <div class="search">
                         <fieldset>
                             <legend>جستجو بر اثاث قیمت</legend>
-                        <form>
-                            
+                            {{Form::open(['route'=>'search'])}}
                                 <div class="input-group">
-
-                                    <input type="text" class="form-control" placeholder="سقف بودجه">
-
-                                    <span class="input-group-btn"><button type="submit" class="btn btn-primary">بگرد</button></span>
+                                    {{Form::text('term',null,['class'=>'form-control', 'placeholder'=>'سقف بودجه'])}}
+                                    <span class="input-group-btn">
+                                        {{Form::submit('بگرد',['class'=>'btn btn-primary'])}}
+                                    </span>
                                 </div>
-                            
-                        </form>
+                            {{Form::close()}}
                         </fieldset>
                     </div>
                     </div>

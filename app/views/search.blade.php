@@ -1,0 +1,7 @@
+@extends('front.master')
+@section('title')
+اروند خودرو
+@endsection
+@section('main')
+    @include('front.cars')
+@endsection

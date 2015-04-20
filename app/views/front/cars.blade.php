@@ -14,7 +14,7 @@
                                     <div class="info">
                                        <h4>{{$car->name}}</h4>
                                         <hr>
-                                        {{$car->info}}
+                                        {{number_format($car->price)}} تومان
                                     </div>
                                 </article>
                                 @endforeach

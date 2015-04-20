@@ -21,4 +21,10 @@ class HomeController extends BaseController {
         return View::make('main')->with(['fact'=>$fact, 'cars'=>$cars]);
     }
 
+    public function search() {
+        $term = Input::get('term');
+        $cars = Car::where('price', '<=', $term)->get();
+        return View::make('search')->with(['cars'=>$cars]);
+    }
+
 }

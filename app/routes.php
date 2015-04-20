@@ -13,6 +13,8 @@
 
 Route::get('/', ['as'=>'main', 'uses'=>'HomeController@index']);
 
+Route::post('search',['as'=>'search', 'uses'=>'HomeController@search']);
+
 Route::group(['before'=>'auth'], function()
     {
         Route::get('admin',['as'=>'admin','uses'=>'adminController@main']);
@@ -35,6 +37,7 @@ Route::group(['before'=>'auth'], function()
             Route::post('{id}/edit',['uses'=>'adminController@postEditFactory']);
 
             Route::get('{id}/delete',['as'=>'deleteFactory','uses'=>'adminController@getDeleteFactory']);
+
 
         });
     }
