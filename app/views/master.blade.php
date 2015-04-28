@@ -12,12 +12,14 @@
 <link rel="stylesheet" href="{{asset('asset/css/font-awesome.min.css')}}">
 <link rel="stylesheet" href="{{asset('asset/css/droidarabicnaskh.css')}}">
 <link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
+    <script src="{{asset('asset/js/ckeditor.js')}}"></script>
 <style>body{padding-top:75px; background: url("{{asset('asset/image/symphony.png')}}") repeat;}.starter-template{padding:75px 15px;text-align:center;}</style>
 
 <!--[if IE]>
 <script src="{{asset('asset/js/html5shiv.min.js')}}"></script>
 <script src="{{asset('asset/js/respond.min.js')}}"></script>
 <![endif]-->
+@yield('head')
 </head>
 
 <body>

@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="{{asset('asset/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('asset/css/droidarabicnaskh.css')}}">
     <link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
+    <script src="{{asset('asset/js/ckeditor.js')}}"></script>
 
     <!--[if IE]>
         <script src="{{asset('asset/js/html5shiv.min.js')}}"></script>
         <script src="{{asset('asset/js/respond.min.js')}}"></script>
+
     <![endif]-->
 </head>
 

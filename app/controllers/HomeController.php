@@ -17,7 +17,7 @@ class HomeController extends BaseController {
 
 	public function index() {
         $fact = Factory::where('name','!=','')->paginate(6);
-        $cars = Car::where('name','!=','')->paginate(3);
+        $cars = Car::where('name','!=','')->orderBy('id','desc')->paginate(3);
         return View::make('main')->with(['fact'=>$fact, 'cars'=>$cars]);
     }
 

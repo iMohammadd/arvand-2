@@ -30,12 +30,13 @@ class adminController extends BaseController {
     }
 
     public function postAddCar(){
+        //dd(Input::file('image'));
         $car = new Car;
         $car->name = Input::get('name');
         $car->factory_id = Input::get('factory');
-        if(Input::file('image') != null) {
-            Input::file('image')->move(public_path() . '/images/cars', $car->id . '.' . Input::file('image')->guessClientExtension());
-            $car->image = 'images/cars/' . $car->id . '.' . Input::file('image')->guessClientExtension();
+        if(Input::hasFile('image')) {
+            Input::file('image')->move(public_path() . '/images/cars',Input::file('image')->getClientOriginalName());
+            $car->image = 'images/cars/' . Input::file('image')->getClientOriginalName();
         }
         $car->price = Input::get('price');
         $car->info = Input::get('info');
@@ -52,6 +53,10 @@ class adminController extends BaseController {
         $car = Car::find($id);
         $car->name = Input::get('name');
         $car->factory_id = Input::get('factory');
+        if(Input::hasFile('image')) {
+            Input::file('image')->move(public_path() . '/images/cars',Input::file('image')->getClientOriginalName());
+            $car->image = 'images/cars/' . Input::file('image')->getClientOriginalName();
+        }
         $car->price = Input::get('price');
         $car->info = Input::get('info');
         $car->save();
