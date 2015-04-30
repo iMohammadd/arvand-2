@@ -12,7 +12,7 @@
                                         @endif
                                     </div>
                                     <div class="info">
-                                       <h4>{{$car->name}}</h4>
+                                       <h4>{{$car->name}}</h4><small>{{$car->factory->name}}</small>
                                         <hr>
                                         {{number_format($car->price)}} تومان
                                     </div>

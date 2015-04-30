@@ -1,7 +1,7 @@
 <div class="row">
                     <div class="content">
                         <fieldset>
-                            <legend>تفکیک بر اثاث کارخانه</legend>
+                            <legend>تفکیک بر اساس کارخانه</legend>
                         <ul>
                             @foreach($fact as $factory)
                             <li>

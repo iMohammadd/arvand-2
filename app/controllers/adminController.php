@@ -75,6 +75,10 @@ class adminController extends BaseController {
     public function postAddFactory(){
         $factory = new Factory;
         $factory->name = Input::get('name');
+        if(Input::hasFile('logo')) {
+            Input::file('logo')->move(public_path() . '/images/factories',Input::file('logo')->getClientOriginalName());
+            $factory->logo = 'images/factories/' . Input::file('logo')->getClientOriginalName();
+        }
         $factory->save();
         return Redirect::route('factory');
     }
@@ -87,6 +91,10 @@ class adminController extends BaseController {
     public function postEditFactory($id){
         $factory = Factory::find($id);
         $factory->name = Input::get('name');
+        if(Input::hasFile('logo')) {
+            Input::file('logo')->move(public_path() . '/images/factories',Input::file('logo')->getClientOriginalName());
+            $factory->logo = 'images/factories/' . Input::file('logo')->getClientOriginalName();
+        }
         $factory->save();
         return Redirect::route('factory');
     }
