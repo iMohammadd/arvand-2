@@ -26,5 +26,10 @@ class HomeController extends BaseController {
         $cars = Car::where('price', '<=', $term)->get();
         return View::make('search')->with(['cars'=>$cars]);
     }
+    
+    public function viewCar($id) {
+        $car = Car::find($id);
+        return View::make('front.car')->with(['car'=>$car]);
+    }
 
 }

@@ -3,6 +3,7 @@
                             <fieldset>
                                 <legend>آخرین خودروهای ثبت شده</legend>
                                 @foreach($cars as $car)
+                                <a href="{{Route('viewCar',['id'=>$car->id, 'name'=>$car->name])}}">
                                 <article>
                                     <div class="img">
                                         @if($car->image == '' or $car->image == NULL)
@@ -17,6 +18,7 @@
                                         {{number_format($car->price)}} تومان
                                     </div>
                                 </article>
+                                    </a>
                                 @endforeach
                             </fieldset>
                         </div>

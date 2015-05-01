@@ -1,7 +1,7 @@
 <div class="row">
                         <div class="search">
                         <fieldset>
-                            <legend>جستجو بر اثاث قیمت</legend>
+                            <legend>جستجو بر اساس قیمت</legend>
                             {{Form::open(['route'=>'search'])}}
                                 <div class="input-group">
                                     {{Form::text('term',null,['class'=>'form-control', 'placeholder'=>'سقف بودجه'])}}
