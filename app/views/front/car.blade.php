@@ -13,7 +13,11 @@
         <article>
             <h3>{{$car->name}}</h3>
             <a class="thumbnail">
+                @if($car->image == '' or $car->image == NULL)
+                <img src="{{asset('asset/image/no-thumbnail.jpg')}}">
+                @else
                 <img src="{{asset($car->image)}}" style="width:100%;">
+                @endif
             </a>
             <p>
                 {{$car->info}}

@@ -5,7 +5,7 @@
                         <ul>
                             @foreach($fact as $factory)
                             <li>
-                                <a href="#">
+                                <a href="{{Route('viewFactoryCars',['id'=>$factory->id, 'name'=>$factory->name])}}">
                                     @if($factory->logo == '' or $factory->logo == NULL)
                                     <img src="{{asset('asset/image/no-thumbnail.jpg')}}">
                                     @else

@@ -16,6 +16,7 @@ Route::get('/', ['as'=>'main', 'uses'=>'HomeController@index']);
 Route::post('search',['as'=>'search', 'uses'=>'HomeController@search']);
 
 Route::get('car/{id}/{name?}', ['as'=>'viewCar', 'uses'=>'HomeController@viewCar']);
+Route::get('factory/{id}/{name?}', ['as'=>'viewFactoryCars', 'uses'=>'HomeController@viewFactoryCars']);
 
 Route::group(['before'=>'auth'], function()
     {

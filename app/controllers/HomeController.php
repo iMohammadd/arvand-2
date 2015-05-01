@@ -31,5 +31,10 @@ class HomeController extends BaseController {
         $car = Car::find($id);
         return View::make('front.car')->with(['car'=>$car]);
     }
+    
+    public function viewFactoryCars($id) {
+        $factory = Factory::find($id);
+        return View::make('front.factory')->with(['factory'=>$factory]);
+    }
 
 }
