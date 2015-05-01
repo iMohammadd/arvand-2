@@ -21,7 +21,7 @@ Route::group(['before'=>'auth'], function()
     {
         Route::get('admin',['as'=>'admin','uses'=>'adminController@main']);
 
-        Route::group(['prefix'=>'car'], function(){
+        Route::group(['prefix'=>'admin/car'], function(){
             Route::get('{id}/delete', ['as'=>'deleteCar', 'uses'=>'adminController@deleteCar']);
             Route::get('add',['as'=>'addCar','uses'=>'adminController@getAddCar']);
             Route::post('add',['uses'=>'adminController@postAddCar']);
@@ -29,7 +29,7 @@ Route::group(['before'=>'auth'], function()
             Route::post('{id}/edit',['uses'=>'adminController@postEditCar']);
         });
 
-        Route::group(['prefix'=>'factory'], function(){
+        Route::group(['prefix'=>'admin/factory'], function(){
             Route::get('/',['as'=>'factory', 'uses'=>'adminController@factory']);
 
             Route::get('add',['as'=>'addFactory','uses'=>'adminController@getAddFactory']);
