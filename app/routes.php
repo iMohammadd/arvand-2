@@ -18,6 +18,8 @@ Route::post('search',['as'=>'search', 'uses'=>'HomeController@search']);
 Route::get('car/{id}/{name?}', ['as'=>'viewCar', 'uses'=>'HomeController@viewCar']);
 Route::get('factory/{id}/{name?}', ['as'=>'viewFactoryCars', 'uses'=>'HomeController@viewFactoryCars']);
 
+Route::post('cm',['as'=>'postComment', 'uses'=>'commentController@create']);
+
 Route::group(['before'=>'auth'], function()
     {
         Route::get('admin',['as'=>'admin','uses'=>'adminController@main']);

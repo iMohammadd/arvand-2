@@ -10,4 +10,8 @@ class Car extends \Eloquent {
     public function Karkhane(){
         return $this->belongsTo('Karkhane');
     }
+    
+    public function Comment(){
+        return $this->HasMany('Comment');
+    }
 }

@@ -32,4 +32,7 @@
             <li>{{$car->name}}</li>
         </ol>
     </div>
+    <div class="row">
+        @include('front.comment')
+    </div>
 @endsection
